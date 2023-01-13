@@ -1,0 +1,133 @@
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">employee_details_list.employee_details_list_data_source</item>
+            <item name="deps" xsi:type="string">employee_details_list.employee_details_list_data_source</item>
+        </item>
+        <item name="spinner" xsi:type="string">spinner_columns</item>
+        <item name="buttons" xsi:type="array">
+            <item name="add" xsi:type="array">
+                <item name="name" xsi:type="string">add</item>
+                <item name="label" xsi:type="string" translate="true">Add New Employee</item>
+                <item name="class" xsi:type="string">primary</item>
+                <!-- <item name="url" xsi:type="string">*/*/edit</item>  -->
+                <!-- <item name="url" xsi:type="string">*/*/createn</item> -->
+                <item name="url" xsi:type="string">*/*/insert</item>
+            </item>
+        </item>
+
+           <item name="fieldAction" xsi:type="array">
+             <item name="provider" xsi:type="string">employee_details_list.employee_details_list_data_source</item>
+                    <item name="target" xsi:type="string">applyAction</item>
+                        <item name="params" xsi:type="array">
+                        <item name="0" xsi:type="string">edit</item>
+                    <item name="1" xsi:type="string">${$.$data.rowIndex}</item>
+            </item>
+        </item> 
+
+
+    </argument>
+
+    <listingToolbar name="listing">
+        <bookmark name="bookmarks"/>
+        <filters name="listing_filters" />
+        <columnsControls name="columns_controls"/>
+        <exportButton name="export_button"/>
+        <paging name="listing_paging"/>
+    </listingToolbar>
+
+
+    <dataSource name="nameOfDataSource">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider</argument>
+            <argument name="name" xsi:type="string">employee_details_list_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">id_column</argument>
+            <argument name="requestFieldName" xsi:type="string">id_column</argument>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/provider</item>
+                    <item name="update_url" xsi:type="url" path="mui/index/render"/>
+                    <item name="storageConfig" xsi:type="array">
+                        <item name="indexField" xsi:type="string">emp_no</item>
+                    </item>
+                </item>
+            </argument>
+        </argument>
+    </dataSource>
+    <columns name="spinner_columns">
+
+        <selectionsColumn name="ids">
+            <settings>
+                <indexField>id_column</indexField>
+            </settings>
+        </selectionsColumn>
+
+        <column name="id_column" sortOrder="10">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Id</label>
+            </settings>
+        </column>
+
+           <column name="emp_no" sortOrder="20">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Emp Id</label>
+            </settings>
+        </column>
+
+        <column name="emp_name" sortOrder="30">
+            <settings>
+                <filter>Text</filter>
+                <label translate="true">Employee Name</label>
+            </settings>
+        </column>
+
+        <column name="contact_no" sortOrder="40">
+            <settings>
+                <filter>Number</filter>
+                <label translate="true">Contact No</label>
+            </settings>
+        </column>
+
+        <column name="dob" sortOrder="50">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">dateRange</item>
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/date</item>
+                    <item name="dataType" xsi:type="string">date</item>
+                    <item name="label" xsi:type="string" translate="true">Date of Birth</item>
+                    <item name="dateFormat" xsi:type="string" translate="true">dd-MM-YYYY</item>
+     
+                </item>
+            </argument>
+        </column>
+
+        <column name="percentage" sortOrder="60">
+            <settings>
+                <filter>Number</filter>
+                <label translate="true">Agent %</label>
+            </settings>
+        </column>
+
+        <!-- <actionsColumn name="actions" class="Employee\Details\Ui\Component\Listing\Column\Actions">
+            <settings>
+                <indexField>id_column</indexField>
+            </settings>
+        </actionsColumn> -->
+
+        <actionsColumn name="actions" class="Employee\Details\Ui\Component\Listing\Column\Actions">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="indexField" xsi:type="string">emp_no</item>
+                    <item name="sortOrder" xsi:type="number">200</item>
+                </item>
+            </argument>
+        </actionsColumn>
+
+     
+
+ 
+    </columns>
+</listing>

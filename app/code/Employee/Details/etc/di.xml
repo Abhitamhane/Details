@@ -1,0 +1,52 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="employee_details_list_data_source" xsi:type="string">Employee\Details\Model\ResourceModel\Post\Collection</item>
+                <item name="employee_details_post_edit_form_data_source" xsi:type="string">Employee\Details\Model\ResourceModel\Post\Collection</item>
+                <item name="employee_details_post_new_data_source" xsi:type="string">Employee\Details\Model\ResourceModel\Post\Collection</item>
+                <item name="edit_form_data_source" xsi:type="string">Employee\Details\Model\ResourceModel\Post\Collection</item>
+                <item name="new_employee_data_source" xsi:type="string">Employee\Details\Model\ResourceModel\Post\Collection</item>
+
+                <item name="agent_commission_details_data_source" xsi:type="string">Employee\Details\Model\ResourceModel\Agent\Collection</item>
+
+            </argument>
+        </arguments>
+        
+    </type>
+    <virtualType name="Employee\Details\Model\ResourceModel\Post\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">mp_post</argument>
+             <argument name="eventPrefix" xsi:type="string">mp_post_collection</argument>
+             <argument name="eventObject" xsi:type="string">id_collection</argument>
+            <argument name="resourceModel" xsi:type="string">Employee\Details\Model\ResourceModel\Post</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid" type="Magento\Sales\Model\ResourceModel\Grid">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="agent_id" xsi:type="string">sales_order.agent_id</item>
+                <item name="agent_commission" xsi:type="string">sales_order.agent_commission</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <!--data provider name which used in grid ui component file -->
+                <item name="grid_record_grid_list_data_source" xsi:type="string">Employee\Details\Model\ResourceModel\Post\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+
+    <virtualType name="Employee\Details\Model\ResourceModel\Agent\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">order_commission</argument>
+
+            <argument name="resourceModel" xsi:type="string">Employee\Details\Model\ResourceModel\Agent</argument>
+        </arguments>
+    </virtualType>
+</config>

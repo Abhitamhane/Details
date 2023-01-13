@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">add_employee_details.edit_form_data_source</item>
+            <item name="deps" xsi:type="string">add_employee_details.edit_form_data_source</item>
+        </item>
+
+        <item name="label" xsi:type="string" translate="true">Sample Form</item>
+        <item name="config" xsi:type="array">
+            <item name="dataScope" xsi:type="string">mp_post</item>
+            <item name="namespace" xsi:type="string">mp_post</item>
+        </item>
+
+        <item name="layout" xsi:type="array">
+            <item name="type" xsi:type="string">tabs</item>
+        </item>
+
+        <item name="buttons" xsi:type="array">
+            <item name="back" xsi:type="string">Employee\Details\Block\Adminhtml\Post\BackButton</item>
+            <item name="save" xsi:type="string">Employee\Details\Block\Adminhtml\Post\SaveButton</item>
+            <item name="reset" xsi:type="string">Employee\Details\Block\Adminhtml\Post\ResetButton</item>
+        </item>
+
+    </argument>
+
+   <dataSource name="edit_form_data_source">
+      <argument name="dataProvider" xsi:type="configurableObject">
+         <argument name="class" xsi:type="string">Employee\Details\Model\DataProvider</argument>
+         <argument name="name" xsi:type="string">edit_form_data_source</argument>
+         <argument name="primaryFieldName" xsi:type="string">id_column</argument>
+         <argument name="requestFieldName" xsi:type="string">id_column</argument>
+         <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+               <item name="submit_url" xsi:type="url" path="*/*/save" />
+            </item>
+         </argument>
+      </argument>
+      <argument name="data" xsi:type="array">
+         <item name="js_config" xsi:type="array">
+            <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+         </item>
+      </argument>
+   </dataSource>
+
+     <fieldset name="general">
+        
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="collapsible" xsi:type="boolean">false</item>
+                <item name="label" xsi:type="string" translate="true">Employee Details</item>
+                <item name="sortOrder" xsi:type="number">20</item>
+            </item>
+        </argument>
+
+        <field name="emp_no">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                <item name="dataType" xsi:type="string">text</item>
+                <item name="label" xsi:type="string" translate="true">Employee Number</item>
+                <item name="formElement" xsi:type="string">input</item>
+                <item name="source" xsi:type="string">employee</item>
+                <item name="dataScope" xsi:type="string">emp_no</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="emp_name">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                <item name="dataType" xsi:type="string">text</item>
+                <item name="label" xsi:type="string" translate="true">Employee Name</item>
+                <item name="formElement" xsi:type="string">input</item>
+                <item name="source" xsi:type="string">employee</item>
+                <item name="dataScope" xsi:type="string">emp_name</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="contact_no">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                <item name="dataType" xsi:type="string">text</item>
+                <item name="label" xsi:type="string" translate="true">Contact No</item>
+                <item name="formElement" xsi:type="string">input</item>
+                <item name="source" xsi:type="string">employee</item>
+                <item name="dataScope" xsi:type="string">contact_no</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="dob">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                <item name="dataType" xsi:type="string">string</item>
+                <item name="label" xsi:type="string" translate="true">Date Of Birth</item>
+                <item name="formElement" xsi:type="string">date</item>
+                <item name="source" xsi:type="string">employee</item>
+                <item name="dataScope" xsi:type="string">dob</item>
+                <item name="dateFormat" xsi:type="string">dd-MM-Y</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="percentage">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                <item name="dataType" xsi:type="string">text</item>
+                <item name="label" xsi:type="string" translate="true">Agent Percentage</item>
+                <item name="formElement" xsi:type="string">input</item>
+                <item name="source" xsi:type="string">employee</item>
+                <item name="dataScope" xsi:type="string">percentage</item>
+                </item>
+            </argument>
+        </field>
+
+    </fieldset>
+
+
+</form>

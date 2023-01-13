@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Employee_Details::details" title="Employee" module="Employee_Details" sortOrder="51" resource="Employee_Details::details"/>
+
+        <add id="Employee_Details::post" title="Manage Employee" module="Employee_Details" sortOrder="10" action="employee_details/post" resource="Employee_Details::post" parent="Employee_Details::details"/>
+
+        <add id="Employee_Details::add_data" title="Add Employee" module="Employee_Details" sortOrder="99" parent="Employee_Details::details" action="employee_details/post/edit" resource="Employee_Details::details_configuration"/>
+        
+        <add id="Employee_Details::agent_data" title="Agent Commission" module="Employee_Details" sortOrder="99" parent="Employee_Details::details" action="employee_details/post/agent" resource="Employee_Details::details"/>
+    </menu>
+</config>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">employee_details.grid_record_grid_list_data_source</item>
+            <item name="deps" xsi:type="string">employee_details.grid_record_grid_list_data_source</item>
+        </item>
+
+        <item name="label" xsi:type="string" translate="true">Employee/Agent Details</item>
+
+        <item name="buttons" xsi:type="array">
+            <item name="back" xsi:type="string">Employee\Details\Block\Adminhtml\Post\BackButton</item>
+            <item name="save" xsi:type="string">Employee\Details\Block\Adminhtml\Post\SaveButton</item>
+            <item name="reset" xsi:type="string">Employee\Details\Block\Adminhtml\Post\ResetButton</item>
+              </item>
+    </argument>
+
+    <settings>
+        <layout>
+            <navContainerName>left</navContainerName>
+            <type>tabs</type>
+        </layout>
+    </settings>
+
+   <dataSource name="grid_record_grid_list_data_source">
+      <argument name="dataProvider" xsi:type="configurableObject">
+         <argument name="class" xsi:type="string">Employee\Details\Model\DataProvider</argument>
+         <argument name="name" xsi:type="string">grid_record_grid_list_data_source</argument>
+         <argument name="primaryFieldName" xsi:type="string">id_column</argument>
+         <argument name="requestFieldName" xsi:type="string">id_column</argument>
+         <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+               <item name="submit_url" xsi:type="url" path="*/*/update" />
+            </item>
+         </argument>
+      </argument>
+      
+      <argument name="data" xsi:type="array">
+         <item name="js_config" xsi:type="array">
+            <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+         </item>
+      </argument>
+   </dataSource>
+
+     <fieldset name="general">
+
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">Employee Details</item>
+                <item name="sortOrder" xsi:type="number">20</item>
+            </item>
+        </argument>
+
+        <field name="emp_no">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                <item name="dataType" xsi:type="string">text</item>
+                <item name="label" xsi:type="string" translate="true">Employee Number</item>
+                <item name="formElement" xsi:type="string">input</item>
+                <item name="source" xsi:type="string">employee</item>
+                <item name="dataScope" xsi:type="string">emp_no</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="emp_name">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                <item name="dataType" xsi:type="string">text</item>
+                <item name="label" xsi:type="string" translate="true">Employee Name</item>
+                <item name="formElement" xsi:type="string">input</item>
+                <item name="source" xsi:type="string">employee</item>
+                <item name="dataScope" xsi:type="string">emp_name</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="contact_no">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                <item name="dataType" xsi:type="string">text</item>
+                <item name="label" xsi:type="string" translate="true">Contact No</item>
+                <item name="formElement" xsi:type="string">input</item>
+                <item name="source" xsi:type="string">employee</item>
+                <item name="dataScope" xsi:type="string">contact_no</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="dob">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                <item name="dataType" xsi:type="string">string</item>
+                <item name="label" xsi:type="string" translate="true">Date Of Birth</item>
+                <item name="dateFormat" xsi:type="string">dd-MM-YYYY</item>
+                <item name="formElement" xsi:type="string">date</item>
+                <item name="source" xsi:type="string">employee</item>
+                <item name="dataScope" xsi:type="string">dob</item>
+                </item>
+            </argument>
+        </field>
+
+        <field name="percentage">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                <item name="dataType" xsi:type="string">string</item>
+                <item name="label" xsi:type="string" translate="true">Agent Percentage</item>
+                <item name="formElement" xsi:type="string">input</item>
+                <item name="source" xsi:type="string">employee</item>
+                <item name="dataScope" xsi:type="string">percentage</item>
+                </item>
+            </argument>
+        </field>
+
+    </fieldset>
+
+    <fieldset name="commission">
+
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <!-- <item name="collapsible" xsi:type="boolean">true</item> -->
+                <item name="label" xsi:type="string" translate="true">Agent Commission Details</item>
+                <item name="sortOrder" xsi:type="number">20</item>
+            </item>
+        </argument>
+        
+        <insertListing name="agent_commission_details" component="Magento_Customer/js/form/components/insert-listing">
+            <settings>
+                <externalProvider>agent_commission_details.agent_commission_details_data_source</externalProvider>
+                <!-- <selectionsProvider>agent_commission_details.agent_commission_details.customer_address_columns.ids</selectionsProvider> -->
+                <autoRender>true</autoRender>
+                <dataScope>agent_commission_details</dataScope>
+                <ns>agent_commission_details</ns>
+                <!-- <exports>
+                    <link name="parent_id">${ $.externalProvider }:params.parent_id</link>
+                </exports>
+
+                <imports>
+                    <link name="parent_id">${ $.provider }:data.customer.agent_id</link>
+                    <link name="onAction">ns = ${ $.ns }, index = actions:action</link>
+                    <link name="onMassAction">ns = ${ $.ns }, index = listing_massaction:massaction</link>
+                </imports> -->
+            </settings>
+        </insertListing>
+
+    </fieldset>
+
+
+</form>

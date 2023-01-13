@@ -1,0 +1,44 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="mp_post">
+        <column xsi:type="int" name="id_column" padding="10" unsigned="true" nullable="false" comment="Entity Id" identity="true"/>
+        <column xsi:type="int" name="emp_no" padding="10" unsigned="true" nullable="false" comment="Severity code"/>
+        <column xsi:type="varchar" name="emp_name" nullable="false" length="255" comment="Title"/>
+        <column xsi:type="date" name="dob"  comment="Time of event"/>
+        <column xsi:type="varchar" name="contact_no" nullable="true" comment="Value"/>
+        <column xsi:type="int" name="percentage" nullable="true" comment="Percentage"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id_column"/>
+        </constraint>
+   </table>
+
+   <table name="quote">
+        <column name="agent_id" nullable="true" xsi:type="varchar" comment="Agent ID" length="1024"/>
+        <column name="agent_commission" nullable="true" xsi:type="varchar" comment="Agent Commission" length="1024"/>
+    </table>
+
+    <table name="sales_order">
+        <column name="agent_id" nullable="true" xsi:type="varchar" comment="Agent ID" length="1024"/>
+        <column name="agent_commission" nullable="true" xsi:type="varchar" comment="Agent Commission" length="1024"/>
+    </table>
+
+    <table name="sales_order_grid">
+        <column name="agent_id" nullable="true" xsi:type="varchar" comment="Agent ID" length="1024"/>
+        <column name="agent_commission" nullable="true" xsi:type="varchar" comment="Agent Commission" length="1024"/>
+    </table>
+
+    <table name="order_commission">
+        <column xsi:type="int" name="entity_id" padding="10" unsigned="true" nullable="false" comment="Entity Id" identity="true"/>
+        <column name="agent_id" nullable="true" xsi:type="varchar" comment="Agent ID" length="1024"/>
+        <column name="agent_commission" nullable="true" xsi:type="varchar" comment="Agent Commission Percentage" length="1024"/>
+        <column name="product_sku" nullable="true" xsi:type="varchar" comment="Product SKU" length="1024"/>
+        <column name="order_no" nullable="true" xsi:type="varchar" comment="Order Number" length="1024"/>
+        <column name="commission" nullable="true" xsi:type="varchar" comment="Commission" length="1024"/>
+        
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+
+
+</schema>

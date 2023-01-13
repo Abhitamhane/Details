@@ -1,0 +1,47 @@
+type Query {
+    getEmployees : [EmployeeDetails] @resolver( class: "Employee\\Details\\Model\\Resolver\\Employee")
+        @doc(description: "Get All  Employee Details")
+
+     getEmployeeById(
+            idColumn: Int @doc(description: "Employee Id")
+        ):EmployeeById @resolver(class: "Employee\\Details\\Model\\Resolver\\EmployeeById")
+        @doc(description: "Get All  Employee Details By Id") 
+}
+
+type EmployeeDetails {
+    id_column: Int
+    emp_no: Int
+    emp_name: String
+    contact_no: String
+    dob: String
+}
+
+type EmployeeById {
+    id_column: Int
+    emp_no: Int
+    emp_name: String
+    contact_no: String
+    dob: String
+}
+
+type Mutation {
+    employeeAdd(input: EmployeeInput @doc(description:"Add Employee Input Data")): EmployeeOutput @resolver(class: "Employee\\Details\\Model\\Resolver\\AddEmployee") @doc(description:"Employee Output")
+}
+
+input EmployeeInput  @doc(description:"Add Employee Input") {
+    
+    empNo: Int @doc(description: "The unique ID of a `Emp Id`.")
+    empName: String @doc(description: "Enter `Emp`")
+    contactNo: Int @doc(description: "Enter `contact_no`")
+    dob: String @doc(description: "Enter `DOB`")
+}
+
+type EmployeeOutput  @doc(description: "Employee Output."){
+    idColumn: Int  @doc(description: "Output `Emp`.")
+    empNo: Int @doc(description: "Output `Emp Id`.")
+    empName: String @doc(description: "`Emp Name` Output")
+    contactNo: Int @doc(description: "`contact_no` Output")
+    dob: String @doc(description: "`DOB` Output")
+}
+
+

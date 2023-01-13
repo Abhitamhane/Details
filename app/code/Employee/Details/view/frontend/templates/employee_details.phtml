@@ -1,0 +1,45 @@
+
+<?php
+$employees = $this->getEmployees();
+?>
+
+<style>
+table {  font-family: arial, sans-serif;  border-collapse: collapse;  width: 100%;  margin-top: 30px;}
+td, th {  border: 1px solid #ddddd0;  text-align: left;  padding: 8px;  }
+tr:nth-child(even) { background-color: #dddddd; }
+.id_column{width:3%} .width{width:20%} .table_width{width:50%}
+
+</style>
+<center>
+<h1> Employee Details </h1>
+  <table class="table_width">
+    <tr>
+      <th class="id_column">Id</th>
+      <th class="width">Employee Id</th>
+      <th class="width">Employee Name</th>
+      <th class="width">Contact Number</th>
+      <th class="width">DOB</th>
+      <th class="width">Commission</th>
+
+    </tr>
+      <?php foreach ($employees as $employee): ?>
+          <tr>
+              <td class="id_column"><?= $employee->getIdColumn();?></td>
+              <td class="width"><?= $employee->getEmpNo();?></td>
+              <td class="width"><?= $employee->getData('emp_name');?></td>
+              <td class="width"><?= $employee->getContactNo();?></td>
+              <td class="width"><?= $employee->getDob();?></td>
+              <td class="width"><?= $employee->getPercentage();?></td>
+          </tr>
+      <?php endforeach;?>
+  </table>
+  <hr>
+  <?php if ($block->getPagerHtml()): ?>
+    <center>
+    <div class="toolbar bottom">
+      <?php echo $block->getPagerHtml(); ?>
+    </div>
+  </center>
+  <?php endif ?>
+</center>   
+
