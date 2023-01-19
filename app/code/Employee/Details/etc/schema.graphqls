@@ -1,14 +1,33 @@
 type Query {
-    getEmployees : [EmployeeDetails] @resolver( class: "Employee\\Details\\Model\\Resolver\\Employee")
+    getEmployees(
+        sortOrder: Int @doc(description: "Sort Options: 0 = Desc, 1 = Asc")
+        current_Page: Int @doc(description: "Current Page")
+        pageSize: Int @doc(description: "Page Size")
+    ): EmployeeDetails
+        @resolver(class: "Employee\\Details\\Model\\Resolver\\Employee")
         @doc(description: "Get All  Employee Details")
 
-     getEmployeeById(
-            idColumn: Int @doc(description: "Employee Id")
-        ):EmployeeById @resolver(class: "Employee\\Details\\Model\\Resolver\\EmployeeById")
-        @doc(description: "Get All  Employee Details By Id") 
+    getEmployeeById(
+        idColumn: Int @doc(description: "Employee Id")
+    ): EmployeeById
+        @resolver(class: "Employee\\Details\\Model\\Resolver\\EmployeeById")
+        @doc(description: "Get All  Employee Details By Id")
+
+    employeeDelete(
+        idColumn: Int @doc(description: "Employee Id")
+    ): employeeDelete
+        @resolver(class: "Employee\\Details\\Model\\Resolver\\DeleteEmployee")
+        @doc(description: "Get All  Employee Details By Id")
 }
 
 type EmployeeDetails {
+    employee: [Employee]
+        @doc(description: "An array containing the all the Employee")
+    total_count: Int @doc(description: "All Collection Size")
+    total_pages: Int @doc(description: "Total Pages")
+}
+
+type Employee {
     id_column: Int
     emp_no: Int
     emp_name: String
@@ -24,24 +43,50 @@ type EmployeeById {
     dob: String
 }
 
-type Mutation {
-    employeeAdd(input: EmployeeInput @doc(description:"Add Employee Input Data")): EmployeeOutput @resolver(class: "Employee\\Details\\Model\\Resolver\\AddEmployee") @doc(description:"Employee Output")
+type employeeDelete {
+    id_column: Int @doc(description: "Id Column")
 }
 
-input EmployeeInput  @doc(description:"Add Employee Input") {
-    
+type Mutation {
+    employeeAdd(
+        input: EmployeeInput @doc(description: "Add Employee Input Data")
+    ): EmployeeOutput
+        @resolver(class: "Employee\\Details\\Model\\Resolver\\AddEmployee")
+        @doc(description: "Employee Output")
+
+    employeeEdit(
+        input: Input @doc(description: "Add Employee Input Data")
+    ): Output
+        @resolver(class: "Employee\\Details\\Model\\Resolver\\EditEmployee")
+        @doc(description: "Employee Output")
+}
+
+input EmployeeInput @doc(description: "Add Employee Input") {
     empNo: Int @doc(description: "The unique ID of a `Emp Id`.")
     empName: String @doc(description: "Enter `Emp`")
     contactNo: Int @doc(description: "Enter `contact_no`")
     dob: String @doc(description: "Enter `DOB`")
 }
 
-type EmployeeOutput  @doc(description: "Employee Output."){
-    idColumn: Int  @doc(description: "Output `Emp`.")
+type EmployeeOutput @doc(description: "Employee Output.") {
     empNo: Int @doc(description: "Output `Emp Id`.")
     empName: String @doc(description: "`Emp Name` Output")
     contactNo: Int @doc(description: "`contact_no` Output")
     dob: String @doc(description: "`DOB` Output")
 }
 
+input Input @doc(description: "Add Employee Input") {
+    idColumn: Int @doc(description: "The unique ID of a `Id Column`.")
+    empNo: Int @doc(description: "The unique ID of a `Emp Id`.")
+    empName: String @doc(description: "Enter `Emp`")
+    contactNo: String @doc(description: "Enter `contact_no`")
+    dob: String @doc(description: "Enter `DOB`")
+}
 
+type Output @doc(description: "Employee Output.") {
+    idColumn: Int @doc(description: "Output `Id Column`.")
+    empNo: Int @doc(description: "Output `Emp Id`.")
+    empName: String @doc(description: "`Emp Name` Output")
+    contactNo: Int @doc(description: "`contact_no` Output")
+    dob: String @doc(description: "`DOB` Output")
+}

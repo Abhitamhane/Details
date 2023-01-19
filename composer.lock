@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a298627e62e670b67f6b90f64b1a29f",
+    "content-hash": "7b8e8c809234486a0dfd155f251a9ff8",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -10006,6 +10006,53 @@
                 }
             ],
             "time": "2022-03-03T13:19:32+00:00"
+        },
+        {
+            "name": "olmer/magento-unit-tests-generator",
+            "version": "0.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/olmer/magento-unit-tests-generator.git",
+                "reference": "3bbfe78ecc3c688634c65ed0ad553d2687934ff8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/olmer/magento-unit-tests-generator/zipball/3bbfe78ecc3c688634c65ed0ad553d2687934ff8",
+                "reference": "3bbfe78ecc3c688634c65ed0ad553d2687934ff8",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "*",
+                "php": "^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Olmer\\UnitTestsGenerator\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Igor Tripolskiy",
+                    "email": "olmer.tripolskiy@gmail.com"
+                }
+            ],
+            "description": "Unit Tests Generator",
+            "support": {
+                "issues": "https://github.com/olmer/magento-unit-tests-generator/issues",
+                "source": "https://github.com/olmer/magento-unit-tests-generator/tree/0.6.1"
+            },
+            "time": "2022-05-02T18:54:32+00:00"
         },
         {
             "name": "pdepend/pdepend",

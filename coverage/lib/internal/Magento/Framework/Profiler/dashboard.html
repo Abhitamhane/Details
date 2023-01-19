@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/abhishek/magento2/lib/internal/Magento/Framework/Profiler</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../../../../_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../../../../../_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="../../../../../_css/style.css" rel="stylesheet" type="text/css">
+  <link href="../../../../../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../../../../../index.html">/home/abhishek/magento2</a></li>
+         <li class="breadcrumb-item"><a href="../../../../index.html">lib</a></li>
+         <li class="breadcrumb-item"><a href="../../../index.html">internal</a></li>
+         <li class="breadcrumb-item"><a href="../../index.html">Magento</a></li>
+         <li class="breadcrumb-item"><a href="../index.html">Framework</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Profiler</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Driver/Factory.php.html#12">Magento\Framework\Profiler\Driver\Factory</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#15">Magento\Framework\Profiler\Driver\Standard</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/AbstractOutput.php.html#10">Magento\Framework\Profiler\Driver\Standard\AbstractOutput</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Csvfile.php.html#13">Magento\Framework\Profiler\Driver\Standard\Output\Csvfile</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Factory.php.html#12">Magento\Framework\Profiler\Driver\Standard\Output\Factory</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Html.php.html#14">Magento\Framework\Profiler\Driver\Standard\Output\Html</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Stat.php.html#12">Magento\Framework\Profiler\Driver\Standard\Stat</a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Driver/Standard/Stat.php.html#12">Magento\Framework\Profiler\Driver\Standard\Stat</a></td><td class="text-right">1190</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#15">Magento\Framework\Profiler\Driver\Standard</a></td><td class="text-right">930</td></tr>
+       <tr><td><a href="Driver/Standard/AbstractOutput.php.html#10">Magento\Framework\Profiler\Driver\Standard\AbstractOutput</a></td><td class="text-right">342</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Csvfile.php.html#13">Magento\Framework\Profiler\Driver\Standard\Output\Csvfile</a></td><td class="text-right">210</td></tr>
+       <tr><td><a href="Driver/Factory.php.html#12">Magento\Framework\Profiler\Driver\Factory</a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Factory.php.html#12">Magento\Framework\Profiler\Driver\Standard\Output\Factory</a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Html.php.html#14">Magento\Framework\Profiler\Driver\Standard\Output\Html</a></td><td class="text-right">30</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Driver/Factory.php.html#34"><abbr title="Magento\Framework\Profiler\Driver\Factory::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Factory.php.html#49"><abbr title="Magento\Framework\Profiler\Driver\Factory::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#36"><abbr title="Magento\Framework\Profiler\Driver\Standard::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#49"><abbr title="Magento\Framework\Profiler\Driver\Standard::_initOutputs">_initOutputs</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#77"><abbr title="Magento\Framework\Profiler\Driver\Standard::_parseOutputConfig">_parseOutputConfig</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#98"><abbr title="Magento\Framework\Profiler\Driver\Standard::_getOutputConfigs">_getOutputConfigs</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#115"><abbr title="Magento\Framework\Profiler\Driver\Standard::_getOutputFactory">_getOutputFactory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#131"><abbr title="Magento\Framework\Profiler\Driver\Standard::_initStat">_initStat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#146"><abbr title="Magento\Framework\Profiler\Driver\Standard::clear">clear</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#159"><abbr title="Magento\Framework\Profiler\Driver\Standard::start">start</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#170"><abbr title="Magento\Framework\Profiler\Driver\Standard::stop">stop</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#181"><abbr title="Magento\Framework\Profiler\Driver\Standard::registerOutput">registerOutput</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#191"><abbr title="Magento\Framework\Profiler\Driver\Standard::display">display</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/AbstractOutput.php.html#45"><abbr title="Magento\Framework\Profiler\Driver\Standard\AbstractOutput::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/AbstractOutput.php.html#63"><abbr title="Magento\Framework\Profiler\Driver\Standard\AbstractOutput::setFilterPattern">setFilterPattern</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/AbstractOutput.php.html#73"><abbr title="Magento\Framework\Profiler\Driver\Standard\AbstractOutput::getFilterPattern">getFilterPattern</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/AbstractOutput.php.html#87"><abbr title="Magento\Framework\Profiler\Driver\Standard\AbstractOutput::setThreshold">setThreshold</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/AbstractOutput.php.html#101"><abbr title="Magento\Framework\Profiler\Driver\Standard\AbstractOutput::getThresholds">getThresholds</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/AbstractOutput.php.html#113"><abbr title="Magento\Framework\Profiler\Driver\Standard\AbstractOutput::_renderColumnValue">_renderColumnValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/AbstractOutput.php.html#135"><abbr title="Magento\Framework\Profiler\Driver\Standard\AbstractOutput::_renderTimerId">_renderTimerId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/AbstractOutput.php.html#145"><abbr title="Magento\Framework\Profiler\Driver\Standard\AbstractOutput::_renderCaption">_renderCaption</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/AbstractOutput.php.html#162"><abbr title="Magento\Framework\Profiler\Driver\Standard\AbstractOutput::_getTimerIds">_getTimerIds</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Csvfile.php.html#38"><abbr title="Magento\Framework\Profiler\Driver\Standard\Output\Csvfile::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Csvfile.php.html#52"><abbr title="Magento\Framework\Profiler\Driver\Standard\Output\Csvfile::_parseFilePath">_parseFilePath</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Csvfile.php.html#68"><abbr title="Magento\Framework\Profiler\Driver\Standard\Output\Csvfile::display">display</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Csvfile.php.html#94"><abbr title="Magento\Framework\Profiler\Driver\Standard\Output\Csvfile::_writeFileContent">_writeFileContent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Factory.php.html#34"><abbr title="Magento\Framework\Profiler\Driver\Standard\Output\Factory::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Factory.php.html#49"><abbr title="Magento\Framework\Profiler\Driver\Standard\Output\Factory::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Html.php.html#22"><abbr title="Magento\Framework\Profiler\Driver\Standard\Output\Html::display">display</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Html.php.html#54"><abbr title="Magento\Framework\Profiler\Driver\Standard\Output\Html::_renderTimerId">_renderTimerId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Stat.php.html#40"><abbr title="Magento\Framework\Profiler\Driver\Standard\Stat::start">start</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Stat.php.html#68"><abbr title="Magento\Framework\Profiler\Driver\Standard\Stat::stop">stop</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Stat.php.html#89"><abbr title="Magento\Framework\Profiler\Driver\Standard\Stat::get">get</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Stat.php.html#105"><abbr title="Magento\Framework\Profiler\Driver\Standard\Stat::fetch">fetch</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Stat.php.html#140"><abbr title="Magento\Framework\Profiler\Driver\Standard\Stat::clear">clear</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Stat.php.html#156"><abbr title="Magento\Framework\Profiler\Driver\Standard\Stat::getFilteredTimerIds">getFilteredTimerIds</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Driver/Standard/Stat.php.html#189"><abbr title="Magento\Framework\Profiler\Driver\Standard\Stat::_getOrderedTimerIds">_getOrderedTimerIds</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Driver/Standard/Stat.php.html#105"><abbr title="Magento\Framework\Profiler\Driver\Standard\Stat::fetch">fetch</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Driver/Standard/Stat.php.html#156"><abbr title="Magento\Framework\Profiler\Driver\Standard\Stat::getFilteredTimerIds">getFilteredTimerIds</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#49"><abbr title="Magento\Framework\Profiler\Driver\Standard::_initOutputs">_initOutputs</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="Driver/Standard/Stat.php.html#189"><abbr title="Magento\Framework\Profiler\Driver\Standard\Stat::_getOrderedTimerIds">_getOrderedTimerIds</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="Driver/Factory.php.html#49"><abbr title="Magento\Framework\Profiler\Driver\Factory::create">create</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#77"><abbr title="Magento\Framework\Profiler\Driver\Standard::_parseOutputConfig">_parseOutputConfig</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Driver/Standard/AbstractOutput.php.html#45"><abbr title="Magento\Framework\Profiler\Driver\Standard\AbstractOutput::__construct">__construct</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Driver/Standard/AbstractOutput.php.html#113"><abbr title="Magento\Framework\Profiler\Driver\Standard\AbstractOutput::_renderColumnValue">_renderColumnValue</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Csvfile.php.html#68"><abbr title="Magento\Framework\Profiler\Driver\Standard\Output\Csvfile::display">display</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Factory.php.html#49"><abbr title="Magento\Framework\Profiler\Driver\Standard\Output\Factory::create">create</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Html.php.html#22"><abbr title="Magento\Framework\Profiler\Driver\Standard\Output\Html::display">display</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#98"><abbr title="Magento\Framework\Profiler\Driver\Standard::_getOutputConfigs">_getOutputConfigs</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#115"><abbr title="Magento\Framework\Profiler\Driver\Standard::_getOutputFactory">_getOutputFactory</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#131"><abbr title="Magento\Framework\Profiler\Driver\Standard::_initStat">_initStat</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Driver/Standard.php.html#191"><abbr title="Magento\Framework\Profiler\Driver\Standard::display">display</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Csvfile.php.html#38"><abbr title="Magento\Framework\Profiler\Driver\Standard\Output\Csvfile::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Csvfile.php.html#52"><abbr title="Magento\Framework\Profiler\Driver\Standard\Output\Csvfile::_parseFilePath">_parseFilePath</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Driver/Standard/Output/Csvfile.php.html#94"><abbr title="Magento\Framework\Profiler\Driver\Standard\Output\Csvfile::_writeFileContent">_writeFileContent</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Driver/Standard/AbstractOutput.php.html#87"><abbr title="Magento\Framework\Profiler\Driver\Standard\AbstractOutput::setThreshold">setThreshold</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Driver/Standard/Stat.php.html#40"><abbr title="Magento\Framework\Profiler\Driver\Standard\Stat::start">start</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Driver/Standard/Stat.php.html#68"><abbr title="Magento\Framework\Profiler\Driver\Standard\Stat::stop">stop</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Driver/Standard/Stat.php.html#89"><abbr title="Magento\Framework\Profiler\Driver\Standard\Stat::get">get</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Driver/Standard/Stat.php.html#140"><abbr title="Magento\Framework\Profiler\Driver\Standard\Stat::clear">clear</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.23</a> using <a href="https://secure.php.net/" target="_top">PHP 8.1.14</a> and <a href="https://phpunit.de/">PHPUnit 9.5.27</a> at Mon Jan 16 21:59:18 PST 2023.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../../../../../_js/jquery.min.js" type="text/javascript"></script>
+  <script src="../../../../../_js/d3.min.js" type="text/javascript"></script>
+  <script src="../../../../../_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([7,0,0,0,0,0,0,0,0,0,0,0], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([37,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,6,"<a href=\"Driver\/Factory.php.html#12\">Magento\\Framework\\Profiler\\Driver\\Factory<\/a>"],[0,30,"<a href=\"Driver\/Standard.php.html#15\">Magento\\Framework\\Profiler\\Driver\\Standard<\/a>"],[0,18,"<a href=\"Driver\/Standard\/AbstractOutput.php.html#10\">Magento\\Framework\\Profiler\\Driver\\Standard\\AbstractOutput<\/a>"],[0,14,"<a href=\"Driver\/Standard\/Output\/Csvfile.php.html#13\">Magento\\Framework\\Profiler\\Driver\\Standard\\Output\\Csvfile<\/a>"],[0,6,"<a href=\"Driver\/Standard\/Output\/Factory.php.html#12\">Magento\\Framework\\Profiler\\Driver\\Standard\\Output\\Factory<\/a>"],[0,5,"<a href=\"Driver\/Standard\/Output\/Html.php.html#14\">Magento\\Framework\\Profiler\\Driver\\Standard\\Output\\Html<\/a>"],[0,34,"<a href=\"Driver\/Standard\/Stat.php.html#12\">Magento\\Framework\\Profiler\\Driver\\Standard\\Stat<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"Driver\/Factory.php.html#34\">Magento\\Framework\\Profiler\\Driver\\Factory::__construct<\/a>"],[0,5,"<a href=\"Driver\/Factory.php.html#49\">Magento\\Framework\\Profiler\\Driver\\Factory::create<\/a>"],[0,1,"<a href=\"Driver\/Standard.php.html#36\">Magento\\Framework\\Profiler\\Driver\\Standard::__construct<\/a>"],[0,8,"<a href=\"Driver\/Standard.php.html#49\">Magento\\Framework\\Profiler\\Driver\\Standard::_initOutputs<\/a>"],[0,5,"<a href=\"Driver\/Standard.php.html#77\">Magento\\Framework\\Profiler\\Driver\\Standard::_parseOutputConfig<\/a>"],[0,3,"<a href=\"Driver\/Standard.php.html#98\">Magento\\Framework\\Profiler\\Driver\\Standard::_getOutputConfigs<\/a>"],[0,3,"<a href=\"Driver\/Standard.php.html#115\">Magento\\Framework\\Profiler\\Driver\\Standard::_getOutputFactory<\/a>"],[0,3,"<a href=\"Driver\/Standard.php.html#131\">Magento\\Framework\\Profiler\\Driver\\Standard::_initStat<\/a>"],[0,1,"<a href=\"Driver\/Standard.php.html#146\">Magento\\Framework\\Profiler\\Driver\\Standard::clear<\/a>"],[0,1,"<a href=\"Driver\/Standard.php.html#159\">Magento\\Framework\\Profiler\\Driver\\Standard::start<\/a>"],[0,1,"<a href=\"Driver\/Standard.php.html#170\">Magento\\Framework\\Profiler\\Driver\\Standard::stop<\/a>"],[0,1,"<a href=\"Driver\/Standard.php.html#181\">Magento\\Framework\\Profiler\\Driver\\Standard::registerOutput<\/a>"],[0,3,"<a href=\"Driver\/Standard.php.html#191\">Magento\\Framework\\Profiler\\Driver\\Standard::display<\/a>"],[0,5,"<a href=\"Driver\/Standard\/AbstractOutput.php.html#45\">Magento\\Framework\\Profiler\\Driver\\Standard\\AbstractOutput::__construct<\/a>"],[0,1,"<a href=\"Driver\/Standard\/AbstractOutput.php.html#63\">Magento\\Framework\\Profiler\\Driver\\Standard\\AbstractOutput::setFilterPattern<\/a>"],[0,1,"<a href=\"Driver\/Standard\/AbstractOutput.php.html#73\">Magento\\Framework\\Profiler\\Driver\\Standard\\AbstractOutput::getFilterPattern<\/a>"],[0,2,"<a href=\"Driver\/Standard\/AbstractOutput.php.html#87\">Magento\\Framework\\Profiler\\Driver\\Standard\\AbstractOutput::setThreshold<\/a>"],[0,1,"<a href=\"Driver\/Standard\/AbstractOutput.php.html#101\">Magento\\Framework\\Profiler\\Driver\\Standard\\AbstractOutput::getThresholds<\/a>"],[0,5,"<a href=\"Driver\/Standard\/AbstractOutput.php.html#113\">Magento\\Framework\\Profiler\\Driver\\Standard\\AbstractOutput::_renderColumnValue<\/a>"],[0,1,"<a href=\"Driver\/Standard\/AbstractOutput.php.html#135\">Magento\\Framework\\Profiler\\Driver\\Standard\\AbstractOutput::_renderTimerId<\/a>"],[0,1,"<a href=\"Driver\/Standard\/AbstractOutput.php.html#145\">Magento\\Framework\\Profiler\\Driver\\Standard\\AbstractOutput::_renderCaption<\/a>"],[0,1,"<a href=\"Driver\/Standard\/AbstractOutput.php.html#162\">Magento\\Framework\\Profiler\\Driver\\Standard\\AbstractOutput::_getTimerIds<\/a>"],[0,3,"<a href=\"Driver\/Standard\/Output\/Csvfile.php.html#38\">Magento\\Framework\\Profiler\\Driver\\Standard\\Output\\Csvfile::__construct<\/a>"],[0,3,"<a href=\"Driver\/Standard\/Output\/Csvfile.php.html#52\">Magento\\Framework\\Profiler\\Driver\\Standard\\Output\\Csvfile::_parseFilePath<\/a>"],[0,5,"<a href=\"Driver\/Standard\/Output\/Csvfile.php.html#68\">Magento\\Framework\\Profiler\\Driver\\Standard\\Output\\Csvfile::display<\/a>"],[0,3,"<a href=\"Driver\/Standard\/Output\/Csvfile.php.html#94\">Magento\\Framework\\Profiler\\Driver\\Standard\\Output\\Csvfile::_writeFileContent<\/a>"],[0,1,"<a href=\"Driver\/Standard\/Output\/Factory.php.html#34\">Magento\\Framework\\Profiler\\Driver\\Standard\\Output\\Factory::__construct<\/a>"],[0,5,"<a href=\"Driver\/Standard\/Output\/Factory.php.html#49\">Magento\\Framework\\Profiler\\Driver\\Standard\\Output\\Factory::create<\/a>"],[0,4,"<a href=\"Driver\/Standard\/Output\/Html.php.html#22\">Magento\\Framework\\Profiler\\Driver\\Standard\\Output\\Html::display<\/a>"],[0,1,"<a href=\"Driver\/Standard\/Output\/Html.php.html#54\">Magento\\Framework\\Profiler\\Driver\\Standard\\Output\\Html::_renderTimerId<\/a>"],[0,2,"<a href=\"Driver\/Standard\/Stat.php.html#40\">Magento\\Framework\\Profiler\\Driver\\Standard\\Stat::start<\/a>"],[0,2,"<a href=\"Driver\/Standard\/Stat.php.html#68\">Magento\\Framework\\Profiler\\Driver\\Standard\\Stat::stop<\/a>"],[0,2,"<a href=\"Driver\/Standard\/Stat.php.html#89\">Magento\\Framework\\Profiler\\Driver\\Standard\\Stat::get<\/a>"],[0,9,"<a href=\"Driver\/Standard\/Stat.php.html#105\">Magento\\Framework\\Profiler\\Driver\\Standard\\Stat::fetch<\/a>"],[0,2,"<a href=\"Driver\/Standard\/Stat.php.html#140\">Magento\\Framework\\Profiler\\Driver\\Standard\\Stat::clear<\/a>"],[0,9,"<a href=\"Driver\/Standard\/Stat.php.html#156\">Magento\\Framework\\Profiler\\Driver\\Standard\\Stat::getFilteredTimerIds<\/a>"],[0,8,"<a href=\"Driver\/Standard\/Stat.php.html#189\">Magento\\Framework\\Profiler\\Driver\\Standard\\Stat::_getOrderedTimerIds<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

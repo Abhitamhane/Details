@@ -27,8 +27,7 @@ class Update extends Action
         try {
 
                 $model = $this->_viewCollectionFactory->create();
-                $model->load($data['general']['id_column']);
-
+                $model->load($data['general']['id_column']);    
                 $phone = $data['general']['contact_no'];
                 if(preg_match('/^[0-9]{10}+$/', $phone)) {
                 $model->setData($data['general']);
