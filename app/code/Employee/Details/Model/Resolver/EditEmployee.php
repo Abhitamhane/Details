@@ -16,6 +16,7 @@ class EditEmployee implements ResolverInterface
     }
 
     /**
+     * 
      * @inheritdoc
      */
     public function resolve(
@@ -41,7 +42,6 @@ class EditEmployee implements ResolverInterface
             $model->setDOb($args['input']['dob']);
             $model->setContactNo($args['input']['contactNo']);
             $model->save();
-            $data['employeeEdit'] = 1231;
             }
             else {
                 throw new GraphQlInputException(__('Invalid Contact Number'));

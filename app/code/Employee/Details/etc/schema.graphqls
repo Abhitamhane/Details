@@ -12,12 +12,6 @@ type Query {
     ): EmployeeById
         @resolver(class: "Employee\\Details\\Model\\Resolver\\EmployeeById")
         @doc(description: "Get All  Employee Details By Id")
-
-    employeeDelete(
-        idColumn: Int @doc(description: "Employee Id")
-    ): employeeDelete
-        @resolver(class: "Employee\\Details\\Model\\Resolver\\DeleteEmployee")
-        @doc(description: "Get All  Employee Details By Id")
 }
 
 type EmployeeDetails {
@@ -43,10 +37,6 @@ type EmployeeById {
     dob: String
 }
 
-type employeeDelete {
-    id_column: Int @doc(description: "Id Column")
-}
-
 type Mutation {
     employeeAdd(
         input: EmployeeInput @doc(description: "Add Employee Input Data")
@@ -59,6 +49,12 @@ type Mutation {
     ): Output
         @resolver(class: "Employee\\Details\\Model\\Resolver\\EditEmployee")
         @doc(description: "Employee Output")
+
+    employeeDelete(
+        input: EmployeeDelete @doc(description: "Employee Id")
+    ): employeeDeleteOutput
+        @resolver(class: "Employee\\Details\\Model\\Resolver\\DeleteEmployee")
+        @doc(description: "Get All  Employee Details By Id")
 }
 
 input EmployeeInput @doc(description: "Add Employee Input") {
@@ -89,4 +85,16 @@ type Output @doc(description: "Employee Output.") {
     empName: String @doc(description: "`Emp Name` Output")
     contactNo: Int @doc(description: "`contact_no` Output")
     dob: String @doc(description: "`DOB` Output")
+}
+
+input EmployeeDelete @doc(description: "Add Employee Input") {
+    idColumn: Int @doc(description: "The unique ID of a `Id Column`.")
+}
+
+type employeeDeleteOutput {
+    id_column: Int @doc(description: "Id Column")
+}
+
+type employeeDeleteOutput @doc(description: "Employee Output.") {
+    idColumn: Int @doc(description: "Output `Id Column`.")
 }

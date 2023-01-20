@@ -26,16 +26,14 @@ class DeleteEmployee implements ResolverInterface
         array $value = null,
         array $args = null
     ) {
-        $id = $args['idColumn'];
-        if (empty($args['idColumn'])) {
+        $id = $args['input']['idColumn'];
+        if (empty($args['input']['idColumn'])) {
             throw new GraphQlInputException(__('Id No should be specified'));
         }
         try {
-
                 $model = $this->_viewCollectionFactory->create();
                 $model->load($id);
                 $model->delete();
-                $data['employeeDelete'] = 123;
 
         } catch (NoSuchEntityException $exception) {
             throw  new NoSuchEntityException(__($exception->getMessage()));
